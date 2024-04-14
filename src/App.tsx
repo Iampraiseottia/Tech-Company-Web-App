@@ -1,4 +1,5 @@
 import Navbar from "./components/Navbar"
+// import About from "./components/about"
 
 function App() {
 
@@ -6,6 +7,8 @@ function App() {
     <>
       
       <Navbar />
+      
+      {/* <About /> */}
 
     </>
   )

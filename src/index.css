@@ -6,16 +6,3 @@ body{
     background: lightgray;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-#header{
-    background-color: #37517e;
-}
-
-button{
-    border-color: #47b2e4;
-}
-
-#Home{
-    color: gold;
-    font-size: 23px;
-}
