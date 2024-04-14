@@ -1,5 +1,5 @@
 import Navbar from "./components/Navbar"
-// import About from "./components/about"
+import About from "./components/About"
 
 function App() {
 
@@ -7,8 +7,8 @@ function App() {
     <>
       
       <Navbar />
+      <About />
       
-      {/* <About /> */}
 
     </>
   )
