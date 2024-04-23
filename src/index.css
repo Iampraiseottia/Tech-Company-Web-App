@@ -6,3 +6,20 @@ body{
     background: lightgray;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#animate-image {
+    position: relative;
+    animation-name: moveUpDown;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes moveUpDown {
+    from {
+        top: 0;
+    }
+    to {
+        top: 30px;
+    }
+}

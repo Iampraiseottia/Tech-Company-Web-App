@@ -1,5 +1,6 @@
 import Navbar from "./components/Navbar"
-import About from "./components/About"
+import About from "./components/Client"
+import Main from "./components/Main"
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <>
       
       <Navbar />
+      <Main />
       <About />
       
 
