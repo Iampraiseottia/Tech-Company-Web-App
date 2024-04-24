@@ -7,6 +7,7 @@ body{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Animate main image  */
 #animate-image {
     position: relative;
     animation-name: moveUpDown;
@@ -23,3 +24,14 @@ body{
         top: 30px;
     }
 }
+
+/* clients  */
+#ClientImg {
+    filter: brightness(20%);
+    transition: filter 0.3s ease;
+}
+
+#ClientImg:hover {
+    filter: brightness(100%);
+}
+  
