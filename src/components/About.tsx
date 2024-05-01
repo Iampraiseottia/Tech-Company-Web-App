@@ -1,14 +1,6 @@
-
 const About = () => {
   return (
     <section id="About" className="leading-9 my-28 text-center">
-        {/* <div className="flex justify-center">
-            <h1 className="m-2 rounded py-2 h-12 w-12 bg-blue-800 text-white text-3xl">A</h1>
-            <h1 className="m-2 rounded py-2 h-12 w-12 bg-blue-800 text-white text-3xl">B</h1>
-            <h1 className="m-2 rounded py-2 h-12 w-12 bg-blue-800 text-white text-3xl">O</h1>
-            <h1 className="m-2 rounded py-2 h-12 w-12 bg-blue-800 text-white text-3xl">U</h1>
-            <h1 className="m-2 rounded py-2 h-12 w-12 bg-blue-800 text-white text-3xl">T</h1>
-        </div> */}
         <div className="">
             <h1 className="text-[37px] font-bold tracking-widest text-[#37517e]">
                 ABOUT US

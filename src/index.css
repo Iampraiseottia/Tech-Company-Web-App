@@ -35,3 +35,10 @@ body{
     filter: brightness(100%);
 }
   
+/* call  */
+#call{
+    background: url("./src/assets/call.jpg");
+    background-position: left;
+    background-color: #3f6ab3;
+    background-blend-mode: multiply;
+}
