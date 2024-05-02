@@ -1,7 +1,7 @@
 
 const Call = () => {
   return (
-    <section id="call" className="bg-[#3f6ab3] pt-16 w-auto h-96 mb-10 my-12 text-white text-center">
+    <section id="call" className="bg-[#3f6ab3] mb-48 pt-16 w-auto h-96 mb-10 my-12 text-white text-center">
         <h1 className="text-[40px] font-bold tracking-wider pb-10">Call To Action</h1>
         <marquee direction="left" className="text-2xl"><strong>OTTIATECH</strong> Has The Perfect Solution OF What You Are Looking For.</marquee>
         <div className="mt-10 flex flex-col sm:flex-row items-center sm:justify-center sm:pl-14">

@@ -3,6 +3,7 @@ import Client from "./components/Client"
 import Main from "./components/Main"
 import About from "./components/About"
 import Call from "./components/Call"
+import Service from "./components/Service"
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <Client />
       <About />
       <Call />
+      <Service />
       
 
     </>
