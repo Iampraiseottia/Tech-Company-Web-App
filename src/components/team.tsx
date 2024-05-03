@@ -2,7 +2,7 @@
 const Team = () => {
     return (
       
-        <section id="Service" className="bg-slate-200 py-20 mt-32 text-center">
+        <section id="Team" className="bg-slate-200 py-20 mt-32 text-center">
              <div className="">
                 <h1 className="text-[37px] font-bold tracking-widest text-[#37517e]">
                     OUR TEAM

@@ -5,6 +5,7 @@ import About from "./components/About"
 import Call from "./components/Call"
 import Service from "./components/Service"
 import Team from "./components/team"
+import Testimony from "./components/Testimony"
 
 function App() {
 
@@ -18,6 +19,8 @@ function App() {
       <Call />
       <Service />
       <Team />
+      <Testimony />
+
     </>
   )
 }

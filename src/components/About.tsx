@@ -11,8 +11,8 @@ const About = () => {
                 <hr className="w-12 h-[2px] bg-slate-600" />
             </div>
         </div>
-        <div className="mt-20 mx-5 flex flex-col-reverse sm:flex-row">
-            <div className="sm:w-[50%] sm:mx-4">
+        <div className="mt-20 mx-5 flex flex-col-reverse lg:flex-row items-center">
+            <div className="lg:w-[50%] md:mx-12 mx-6">
                 <strong><b>OTTIATECH </b></strong> is a <em>Giant Technology Company</em> establish in 2023 with it's prime founder and CEO <em><b>OTTIA PRAISE BETECK.</b></em> These organization strive to tackle:
                 <ol>
                     <li className="flex">
@@ -30,7 +30,7 @@ const About = () => {
                 </ol>
             </div>
             <div className="">
-                <img src="./src/assets/why-us.png" className="sm:h-[440px] w-[540px]" />
+                <img src="./src/assets/why-us.png" className="sm:h-[440px] w-[740px]" />
             </div>
         </div>
     </section>
