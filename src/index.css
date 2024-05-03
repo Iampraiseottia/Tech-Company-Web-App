@@ -42,3 +42,9 @@ body{
     background-color: #3f6ab3;
     background-blend-mode: multiply;
 }
+
+#darkshadow{
+    box-shadow: 1px 8px 16px rgb(172, 170, 170);
+    margin-bottom: 40px;
+    margin-right: 16px;
+}

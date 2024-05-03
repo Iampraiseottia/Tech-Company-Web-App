@@ -4,6 +4,7 @@ import Main from "./components/Main"
 import About from "./components/About"
 import Call from "./components/Call"
 import Service from "./components/Service"
+import Team from "./components/team"
 
 function App() {
 
@@ -16,8 +17,7 @@ function App() {
       <About />
       <Call />
       <Service />
-      
-
+      <Team />
     </>
   )
 }
