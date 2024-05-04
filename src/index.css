@@ -72,3 +72,19 @@ body{
         width: 595px;
     }
 }
+
+
+@media (min-width: 760px) {
+    #service-try,
+    #service-try2,
+    #service-try3{
+        display: flex;
+    }
+    
+}
+
+/* @media (min-width: 1000px) {
+    #service-tri{
+        display: flex;
+    }
+} */
