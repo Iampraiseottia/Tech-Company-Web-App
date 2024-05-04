@@ -15,7 +15,7 @@ const Contact = () => {
             </div>
             <p className="md:px-14 tracking-widest text-[17px] pt-5 px-7 leading-8"><em><strong> We are just a message away</strong></em>. <i>Reach out to <strong>Ottiatech</strong> amazing and brilliant taem and ensure your worries or doubts about these amazing platform would be put to a calm and entricking rest</i></p>
             <div className="mt-14 flex flex-col lg:flex-row lg:justify-evenly justify-evenly items-center  ">
-                <div className="bg-white py-7 mt-14 h-[690px] mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[400px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
+                <div id="con-left" className="bg-white py-7 mt-14 h-[690px] mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[400px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
                     <div className="flex px-5 justify-evenly items-center mb-6">
                         <img src="./src/assets/location.png" className="h-20 w-auto" />
                         <div className="text-left ml-2">
@@ -40,9 +40,9 @@ const Contact = () => {
                             <p className="tracking-wider">+237 682 394 856</p>
                         </div>
                     </div>
-                    <iframe className="lg:w-[350px] lg:ml-6 md:w-[500px] md:ml-14 mx-8 w-96 h-72" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.426148631475!2d9.303791573717996!3d4.13626674629469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10613123b50e6ff9%3A0x5cebc748ddb3786f!2sMalingo%20Junction%20Buea!5e0!3m2!1sen!2scm!4v1711582055010!5m2!1sen!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
+                    <iframe id="iframe" className="lg:w-[350px] lg:ml-6 md:w-[500px] md:ml-14 mx-8 w-96 h-72" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.426148631475!2d9.303791573717996!3d4.13626674629469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10613123b50e6ff9%3A0x5cebc748ddb3786f!2sMalingo%20Junction%20Buea!5e0!3m2!1sen!2scm!4v1711582055010!5m2!1sen!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
                 </div>
-                <div className="bg-white mt-14 py-7  h-auto mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[550px] lg:ml-[-10px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
+                <div id="bigger" className="bg-white mt-14 py-7  h-auto mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[550px] lg:ml-[-10px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
                     <div className="text-left mx-10">
                         <label className="text-xl tracking-wider leading-9">Your Full Names: <br /> <input type="text" name="full-name" placeholder="Full Names" id="full-name" className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px] lg:w-[494px]" /></label>
                     </div>

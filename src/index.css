@@ -48,3 +48,27 @@ body{
     margin-bottom: 40px;
     margin-right: 16px;
 }
+
+/* Responsive  */
+@media (min-width: 1180px) {
+    #bigger{
+        width: 660px;
+    }
+    #con-left{
+        width: 460px;
+    }
+    #iframe{
+        width: 410px;   
+    }
+    #email,
+    #country,
+    #phone,
+    #city{
+        width: 290px;
+    }
+    #full-name,
+    #subject,
+    #message{
+        width: 595px;
+    }
+}
