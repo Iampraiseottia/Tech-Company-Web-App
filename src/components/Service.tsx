@@ -18,7 +18,7 @@ const Service = () => {
             <div className="mt-[-40px] mr-2 bg-white px-3 leading-7 shadow-2xl h-[300px] flex flex-col w-[365px] py-9 items-center text-center rounded hover:translate-y-[-4%] transition duration-500">
                 <img src="./src/assets/service1.png" className="rounded-full w-28 h-28" />
                 <h2 className="py-4 font-extrabold  text-blue-700 text">Application Development</h2>
-                <p><i>Develop the best and user friend mobile applications for Web, IOS & Andriod</i></p>
+                <p><i>Develop the best and user friend mobile applications for Web, IOS & Android</i></p>
             </div>
             <div className="mt-10 mr-2 bg-white px-3 leading-7 shadow-2xl h-[300px] mb-20  flex flex-col w-[365px] py-9 items-center text-center rounded hover:translate-y-[-4%] transition duration-500">
                 <img src="./src/assets/service2.png" className="rounded-full w-28 h-28" />
