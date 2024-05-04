@@ -4,8 +4,11 @@ import Main from "./components/Main"
 import About from "./components/About"
 import Call from "./components/Call"
 import Service from "./components/Service"
-import Team from "./components/team"
+import Team from "./components/Team"
 import Testimony from "./components/Testimony"
+import Contact from "./components/Contact"
+import Newsletter from "./components/Newsletter"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -20,7 +23,10 @@ function App() {
       <Service />
       <Team />
       <Testimony />
-
+      <Contact />
+      <Newsletter />
+      <Footer />
+      
     </>
   )
 }
