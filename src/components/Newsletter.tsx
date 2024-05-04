@@ -4,7 +4,7 @@ const Newsletter = () => {
     return (
       <section id="Newsletter" className=" my-24 bg-slate-200 py-16 text-center">
         <h1 className="text-[37px] font-bold tracking-widest text-blue-800">
-          Join Our Newsletter
+          Join Our Newsletter ❤️
         </h1>
         <p className="md:px-14 tracking-widest text-[17px] pt-5 px-7 leading-8">Subscribe To <i><strong>Ottiatech</strong> To Get The Updates On Latest Developments</i></p>
         <div className="">

@@ -18,9 +18,9 @@ const Testimony = () => {
             <div className="mt-[-40px] mr-2 bg-white px-3 leading-7 shadow-2xl h-auto flex flex-col w-[365px] py-9 items-center text-center rounded hover:translate-y-[-4%] transition duration-500">
                 <img src="./src/assets/service1.png" className="rounded-full w-40 h-40" />
                 <h2 className="py-5 font-extrabold  text-blue-700 text-xl">Ndi Maccarthy Kanjo</h2>
-                <p><i>WOW!!!, Ottiatech is just the best amongs all tech companies in all the services offered</i></p>
+                <p><i>WOW!!!, Ottiatech is just the best amongst all tech companies in all the services offered</i></p>
                 <div className="flex justify-between items-center mt-5">
-                    <img src="./src/assets/star.jpg" className="mr-2 w-8 mr-2 h-8 rounded-full hover:cursor-pointer hover:opacity-80  hover:translate-y-[-2%] transition duration-500" />
+                    <img src="./src/assets/star.jpg" className="w-8 mr-2 h-8 rounded-full hover:cursor-pointer hover:opacity-80  hover:translate-y-[-2%] transition duration-500" />
                     <img src="./src/assets/star.jpg" className="w-8 mr-2 h-8 rounded-full hover:cursor-pointer hover:opacity-80  hover:translate-y-[-2%] transition duration-500" />
                     <img src="./src/assets/star.jpg" className="w-8 mr-2 h-8 rounded-full hover:cursor-pointer hover:opacity-80  hover:translate-y-[-2%] transition duration-500" />
                     <img src="./src/assets/star.jpg" className="w-9 mr-2 h-9 rounded-full hover:cursor-pointer hover:opacity-80  hover:translate-y-[-2%] transition duration-500" />
