@@ -31,3 +31,12 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+
+
+<!-- Project  -->
+OTTIATECH is a tech company founded by OTTIA PRAISE BETECK 
+It was inaugurated in 2023 
+It provides amazing tech services to the general public
+It is very reliable, accurate and trust worthy
+It has an amazing team which ensures customers satisfaction
+It delivers top-notch services and on-time services
