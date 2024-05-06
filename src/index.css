@@ -82,3 +82,16 @@ body{
     }
     
 }
+
+@media (min-width: 400px) {
+    #mainImg{
+        margin-bottom: 38px;
+    }
+}
+
+@media (min-width: 767px) {
+    #mainImg{
+        margin-bottom: 38px;
+        width: 800px;
+    }
+}

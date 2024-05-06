@@ -1,4 +1,6 @@
-const About = () => {
+
+const About = (props) => {
+
   return (
     <section id="About" className="leading-9 my-36 text-center">
         <div className="">
@@ -13,11 +15,11 @@ const About = () => {
         </div>
         <div className="mt-20 mx-5 flex flex-col-reverse lg:flex-row items-center">
             <div className="lg:w-[50%] md:mx-12 mx-6">
-                <strong><b>OTTIATECH </b></strong> is a <em>Giant Technology Company</em> establish in 2023 with it's prime founder and CEO <em><b>OTTIA PRAISE BETECK.</b></em> These organization strive to tackle:
+                <strong><b>{props.comName} </b></strong> is a <em>Giant Technology Company</em> establish in {props.establish} with it's prime founder and CEO <em><b>{props.CEO}.</b></em> These organization strive to tackle:
                 <ol>
                     <li className="flex">
                         <img src="./src/assets/double tick.png" className="h-7 w-7" />
-                        <br /><p>Cloud computing, software development, AI/ML, data analytics, cybersecurity, IoT, digital transformation, e-commerce, hardware goods, and research and development are just a few of the many services that <strong>ottiatech</strong> provides.</p>
+                        <br /><p>{props.cloud}, {props.SD}, {props.Intelligence}, {props.data}, {props.CS}, {props.Iot}, {props.DT}, {props.EC}, {props.HG}, and {props.RD} are just a few of the many services that <strong>{props.comName}</strong> provides.</p>
                     </li>   
                     <li className="flex">
                         <img src="./src/assets/double tick.png" className="h-7 w-7" />

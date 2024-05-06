@@ -1,11 +1,11 @@
 
-const Contact = () => {
+const Contact = (props) => {
 
     return (
         <section id="Contact" className="bg-slate-200 py-20 mt-32 text-center">
             <div className="">
                 <h1 className="text-[37px] font-bold tracking-widest text-[#37517e]">
-                    CONTACT US
+                    {props.conTitle}
                 </h1>
                 <div className="flex justify-center mt-2 mb-10 items-center">
                     <hr className="w-12 h-[2px] bg-slate-600" />
@@ -13,7 +13,7 @@ const Contact = () => {
                     <hr className="w-12 h-[2px] bg-slate-600" />
                 </div>
             </div>
-            <p className="md:px-14 tracking-widest text-[17px] pt-5 px-7 leading-8"><em><strong> We are just a message away</strong></em>. <i>Reach out to <strong>Ottiatech</strong> amazing and brilliant taem and ensure your worries or doubts about these amazing platform would be put to a calm and entricking rest</i></p>
+            <p className="md:px-14 tracking-widest text-[17px] pt-5 px-7 leading-8"><em><strong> We are just a message away</strong></em>. <i>Reach out to <strong>{props.comName}</strong> amazing and brilliant team and ensure your worries or doubts about these amazing platform would be put to a calm and entricking rest</i></p>
             <div className="mt-14 flex flex-col lg:flex-row lg:justify-evenly justify-evenly items-center  ">
                 <div id="con-left" className="bg-white py-7 mt-14 h-[690px] mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[400px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
                     <div className="flex px-5 justify-evenly items-center mb-6">
@@ -21,7 +21,7 @@ const Contact = () => {
                         <div className="text-left ml-2">
                             <label className="text-2xl font-bold tracking-wider text-fuchsia-950">Location:</label>
                             <br />
-                            <p className="tracking-wider">Untared Malingo, Buea, Southwest, Cameroon</p>
+                            <p className="tracking-wider">{props.location} </p>
                         </div>
                     </div>
                     <div className="flex px-5 justify-around items-center mb-6 ml-[-90px]">
@@ -29,7 +29,7 @@ const Contact = () => {
                         <div className="text-left ml-[-160px] ">
                             <label className="text-2xl font-bold tracking-wider text-fuchsia-950">Email Address:</label>
                             <br />
-                            <p className="tracking-wider">ottiapraise50@gmail.com </p>
+                            <p className="tracking-wider">{props.conEmail} </p>
                         </div>
                     </div>
                     <div className="flex px-5 justify-around items-center mb-6 ml-[-90px]">
@@ -37,7 +37,7 @@ const Contact = () => {
                         <div className="text-left ml-[-160px]">
                             <label className="text-2xl font-bold tracking-wider text-fuchsia-950">Phone Number:</label>
                             <br />
-                            <p className="tracking-wider">+237 682 394 856</p>
+                            <p className="tracking-wider">{props.conNum} </p>
                         </div>
                     </div>
                     <iframe id="iframe" className="lg:w-[350px] lg:ml-6 md:w-[500px] md:ml-14 mx-8 w-96 h-72" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.426148631475!2d9.303791573717996!3d4.13626674629469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10613123b50e6ff9%3A0x5cebc748ddb3786f!2sMalingo%20Junction%20Buea!5e0!3m2!1sen!2scm!4v1711582055010!5m2!1sen!2scm" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            
