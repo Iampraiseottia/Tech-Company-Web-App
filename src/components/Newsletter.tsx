@@ -34,7 +34,7 @@ const Newsletter = (props) => {
         
          {/* Popup */}
         {popupVisible && (
-          <div id="pop" className="flex items-center justify-center absolute top-[7800px] left-72 popup">
+          <div id="pop" className="flex items-center justify-center absolute top-[7800px] left-72 popup shadow-2xl">
             <div className="bg-white h-64 w-[680px]">
               <img src="./src/assets/popup.PNG" className=" h-40 ml-64 rounded-full mt-[-80px]" />
               <p id="letter" className="pt-6 text-xl tracking-widest mt-1 font-extrabold">{news}</p>

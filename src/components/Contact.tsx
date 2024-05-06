@@ -1,5 +1,62 @@
+import React, {useState} from "react"
 
 const Contact = (props) => {
+
+    const [message, setMessage] = useState('Message Sent');
+    const [name, setName] = useState();
+    const [email, setEmail] = useState();
+    const [number, setNumber] = useState();
+    const [city, setCity] = useState();
+    const [country, setCountry] = useState();
+    const [subject, setSubject] = useState();
+    const [idea, setIdea] = useState();
+    const [popupVisible, setPopupVisible] = useState(false);
+
+    const handlerChangeName = (event) => {
+        setName(event.target.value)
+    }
+
+    const handlerChangeEmail = () => {
+        setEmail(event.target.value)
+    }
+
+    const handlerChangeNumber = () => {
+        setNumber(event.target.value)
+    }
+
+    const handlerChangeCity = () => {
+        setCity(event.target.value)
+    }
+
+    const handlerChangeCountry = () => {
+        setCountry(event.target.value)
+    }
+
+    const handlerChangeSubject = () => {
+        setSubject(event.target.value)
+    }
+
+    const handlerChangeIdea = () => {
+        setIdea(event.target.value)
+    }
+
+    const submitHandler = () => {
+        setMessage('Thanks For Contacting OTTIATECH. Your Request or Worry Would Be Settled As Soon As Possible');
+        setName('');
+        setEmail('');
+        setCity('');
+        setCountry('');
+        setNumber('');
+        setSubject('');
+        setIdea('');
+        setPopupVisible(true)
+    }
+
+
+    const closePopup = () => {
+        setPopupVisible(false)
+    }
+
 
     return (
         <section id="Contact" className="bg-slate-200 py-20 mt-32 text-center">
@@ -44,16 +101,16 @@ const Contact = (props) => {
                 </div>
                 <div id="bigger" className="bg-white mt-14 py-7  h-auto mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[550px] lg:ml-[-10px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
                     <div className="text-left mx-10">
-                        <label className="text-xl tracking-wider leading-9">Your Full Names: <br /> <input type="text" name="full-name" placeholder="Full Names" id="full-name" className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px] lg:w-[494px]" /></label>
+                        <label className="text-xl tracking-wider leading-9">Your Full Names: <br /> <input onChange={handlerChangeName} type="text" name="full-name" value={name} placeholder="Full Names" id="full-name" className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px] lg:w-[494px]" /></label>
                     </div>
                     <div className="text-left mx-10 flex flex-col lg:flex-row lg:justify-between">
-                        <label className="text-xl tracking-wider leading-9 mt-3">Your Email Address: <br /> <input type="email" placeholder="Email Address" name="email" id="email" className="lg:w-[240px] lg:mr-3 border-2 border-slate-200 rounded focus:outline-blue-500 sm:w-72 md:w-[520px]  w-full h-11 px-6 py-4 text-[15px] " /></label>
-                        <label className="text-xl tracking-wider leading-9 mt-3">Your Phone Number: <br /> <input type="tel" placeholder="Zip Code & Phone Number" name="phone" id="phone" className="lg:w-[240px] border-2 border-slate-200 rounded focus:outline-blue-500 md:w-[520px] sm:w-72 w-full h-11 px-6 py-4 text-[15px] " /></label>
+                        <label className="text-xl tracking-wider leading-9 mt-3">Your Email Address: <br /> <input onChange={handlerChangeEmail} type="email" value={email} placeholder="Email Address" name="email" id="email" className="lg:w-[240px] lg:mr-3 border-2 border-slate-200 rounded focus:outline-blue-500 sm:w-72 md:w-[520px]  w-full h-11 px-6 py-4 text-[15px] " /></label>
+                        <label className="text-xl tracking-wider leading-9 mt-3">Your Phone Number: <br /> <input onChange={handlerChangeNumber} type="tel" value={number} placeholder="Zip Code & Phone Number" name="phone" id="phone" className="lg:w-[240px] border-2 border-slate-200 rounded focus:outline-blue-500 md:w-[520px] sm:w-72 w-full h-11 px-6 py-4 text-[15px] " /></label>
                     </div>
                     <div className="text-left mx-10 flex flex-col lg:flex-row lg:justify-between">
-                        <label className="text-xl tracking-wider leading-9 mt-3">Your Street & City: <br /> <input type="text" placeholder="Street & City" name="city" id="city" className="border-2 border-slate-200 md:w-[520px] rounded focus:outline-blue-500  w-full lg:w-[240px] h-11 px-6 py-4 text-[15px] sm:w-72 " /></label>
+                        <label className="text-xl tracking-wider leading-9 mt-3">Your Street & City: <br /> <input onChange={handlerChangeCity} type="text" value={city} placeholder="Street & City" name="city" id="city" className="border-2 border-slate-200 md:w-[520px] rounded focus:outline-blue-500  w-full lg:w-[240px] h-11 px-6 py-4 text-[15px] sm:w-72 " /></label>
                         <label className="text-xl tracking-wider leading-9 mt-3">Your Country: <br /> 
-                            <select name="country" id="country" className="lg:w-[240px] md:w-[520px] border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6  text-[15px] sm:w-72 ml-2">
+                            <select onChange={handlerChangeCountry} name="country" id="country" className="lg:w-[240px] md:w-[520px] border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6  text-[15px] sm:w-72 ml-2" value={country}>
                                 <option value="Choose Your Country" >Choose Your Country</option>
                                 <option value="Canada">Canada</option>
                                 <option value="Cameroon">Cameroon</option>
@@ -65,14 +122,22 @@ const Contact = (props) => {
                         </label>
                     </div>
                     <div className="text-left mx-10 mt-4">
-                        <label className="text-xl tracking-wider leading-9 ">Subject: <br /> <input type="text" name="subject" placeholder="Subject" id="subject" className="border-2 border-slate-200 lg:w-[490px] rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px]" /></label>
+                        <label className="text-xl tracking-wider leading-9 ">Subject: <br /> <input onChange={handlerChangeSubject} value={subject} type="text" name="subject" placeholder="Subject" id="subject" className="border-2 border-slate-200 lg:w-[490px] rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px]" /></label>
                     </div>
                     <div className="text-left mx-10 mt-4">
                         <textarea placeholder="                 
                         
-                        message" name="message" id="message" cols="45" rows="6" className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full px-6 py-4 text-[15px] lg:w-[490px]" ></textarea>
+                        message" name="message" id="message" cols="45" rows="6" value={idea} onChange={handlerChangeIdea} className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full px-6 py-4 text-[15px] lg:w-[490px]" ></textarea>
                     </div>
-                    <button className="md:w-[520px] mt-8 border h-12 w-96 rounded hover:opacity-95 ease-in-out hover:cursor-pointer bg-blue-600 text-white font-extrabold text-[16.5px]">Send Message</button>
+                    <button onClick={submitHandler} className="md:w-[520px] mt-8 border h-12 w-96 rounded hover:opacity-95 ease-in-out hover:cursor-pointer bg-blue-600 text-white font-extrabold text-[16.5px]">Send Message</button>
+                
+                    {popupVisible && (
+                        <div id="popup" className=" bg-yellow-200 tracking-widest h-72 w-[750px] absolute top-[7240px] left-72 px-12 text-xl font-extrabold shadow-2xl">
+                        <img src="./src/assets/popup.PNG" className=" rounded-full h-44 ml-60 mt-[-70px] mb-7" />
+                        <p className="">{message}</p>
+                        <button onClick={closePopup} className="h-14 mt-5 text-green-600 bg-white w-96 hover:opacity-95 ease-in-out hover:bg-green-500 hover:ease-in-out hover:text-white">Close</button>
+                    </div>
+                    )}
                 </div>
             </div>
       </section>
