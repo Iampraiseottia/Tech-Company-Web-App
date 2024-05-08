@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 const Contact = (props) => {
 
@@ -56,6 +56,35 @@ const Contact = (props) => {
     const closePopup = () => {
         setPopupVisible(false)
     }
+
+    
+    useEffect(() => {
+        console.log('Full Name Rendered')
+    }, [name]);
+
+    useEffect(() => {
+        console.log('Email Address Rendered')
+    }, [email]);
+
+    useEffect(() => {
+        console.log('City Rendered Alongside Street')
+    }, [city]);
+
+    useEffect(() => {
+        console.log('Phone Number Rendered Alongside Zip Code')
+    }, [number]);
+
+    useEffect(() => {
+        console.log('Subject For Contacting Rendered')
+    }, [subject]);
+
+    useEffect(() => {
+        console.log('Message Explaining Idea Rendered')
+    }, [idea]);
+
+    useEffect(() => {
+        console.log('Country Of Origin Rendered')
+    }, [country]);
 
 
     return (

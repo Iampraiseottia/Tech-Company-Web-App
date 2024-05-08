@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 const Newsletter = (props) => {
 
@@ -19,6 +19,11 @@ const Newsletter = (props) => {
   const closePopup = () => {
     setPopupVisible(false);
   };
+
+
+  useEffect(() => {
+    console.log('Email Address On Subscription')
+  }, [emailValue])
 
 
     return (
