@@ -43,23 +43,23 @@ const Footer = (props) => {
         <div className="mb-5 sm:hidden ">
           <h1 className="text-2xl font-extrabold tracking-wider text-blue-800">{props.title2}</h1>
           <ul>
-            <li className="mt-3 hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#header">{props.AD}</a></li>
-            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#About">{props.cloud}</a></li>
+            <li className="mt-3 hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.AD}</a></li>
+            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.cloud}</a></li>
             <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.DP}</a></li>
-            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Team">{props.EC}</a></li>
-            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Testimony">{props.AD}</a></li>
-            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact">{props.stream}</a></li>
+            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.EC}</a></li>
+            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.AD}</a></li>
+            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.stream}</a></li>
           </ul>
         </div>
         <div className="px-10 sm:hidden">
           <h1 className="text-2xl font-extrabold tracking-wider text-blue-800">{props.title3}</h1>
           <p className="mt-3">You can reach out to us on social media and development an unforgettable 🔥 network you won't want to forget in a hurry 🥰.</p><br />
           <div className="flex">
-            <img src="./src/assets/in.PNG" className="h-14 hover:mt-[-1px] ease-in-out " />
-            <img src="./src/assets/fb.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-            <img src="./src/assets/instagram.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-            <img src="./src/assets/tweet.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-            <img src="./src/assets/social.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
+            <img src="./src/assets/in.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out " />
+            <img src="./src/assets/fb.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+            <img src="./src/assets/instagram.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+            <img src="./src/assets/tweet.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+            <img src="./src/assets/social.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
           </div>
         </div>
 
@@ -67,23 +67,23 @@ const Footer = (props) => {
           <div className="mb-5">
            <h1 className="text-2xl font-extrabold tracking-wider text-blue-800">{props.title2}</h1>
             <ul>
-              <li className="mt-3 hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#header">{props.AD}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#About">{props.cloud}</a></li>
+              <li className="mt-3 hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.AD}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.cloud}</a></li>
               <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.DP}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Team">{props.EC}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Testimony">{props.AD}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact">{props.stream}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.EC}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.AD}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.stream}</a></li>
             </ul>
           </div>
           <div className="px-10 sm:w-[50%]">
             <h1 className="text-2xl font-extrabold tracking-wider text-blue-800">{props.title3}</h1>
             <p className="mt-3">You can reach out to us on social media and development an unforgettable 🔥 network you won't want to forget in a hurry 🥰.</p><br />
             <div className="flex">
-              <img src="./src/assets/in.PNG" className="h-14 hover:mt-[-1px] ease-in-out " />
-              <img src="./src/assets/fb.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-              <img src="./src/assets/instagram.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-              <img src="./src/assets/tweet.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-              <img src="./src/assets/social.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
+              <img src="./src/assets/in.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out " />
+              <img src="./src/assets/fb.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+              <img src="./src/assets/instagram.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+              <img src="./src/assets/tweet.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+              <img src="./src/assets/social.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
             </div>
           </div>
         </div>
@@ -107,23 +107,23 @@ const Footer = (props) => {
           <div className="mb-5 md:block hidden md:w-[20%]">
             <h1 className="text-2xl font-extrabold tracking-wider text-blue-800">{props.title2}</h1>
             <ul>
-              <li className="mt-3 hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#header">{props.AD}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#About">{props.cloud}</a></li>
+              <li className="mt-3 hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.AD}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.cloud}</a></li>
               <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.DP}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Team">{props.EC}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Testimony">{props.AD}</a></li>
-              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact">{props.stream}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.EC}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.AD}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Service">{props.stream}</a></li>
             </ul>
           </div>
           <div className="md:block px-10 hidden md:w-[35%]">
             <h1 className="text-2xl font-extrabold tracking-wider text-blue-800">{props.title3}</h1>
             <p className="mt-3">You can reach out to us on social media and development an unforgettable 🔥 network you won't want to forget in a hurry 🥰.</p><br />
             <div className="flex">
-              <img src="./src/assets/in.PNG" className="h-14 hover:mt-[-1px] ease-in-out " />
-              <img src="./src/assets/fb.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-              <img src="./src/assets/instagram.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-              <img src="./src/assets/tweet.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
-              <img src="./src/assets/social.PNG" className="h-14 hover:mt-[-1px] ease-in-out" />
+              <img src="./src/assets/in.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out " />
+              <img src="./src/assets/fb.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+              <img src="./src/assets/instagram.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+              <img src="./src/assets/tweet.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
+              <img src="./src/assets/social.PNG" className="h-14 hover:mt-[-1px] hover:cursor-pointer ease-in-out" />
             </div>
           </div>
         </div>

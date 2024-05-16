@@ -9,6 +9,7 @@ import Testimony from "./components/Testimony"
 import Contact from "./components/Contact"
 import Newsletter from "./components/Newsletter"
 import Footer from "./components/Footer"
+import Login from "./components/Login"
 
 function App() {
 
@@ -133,6 +134,8 @@ function App() {
         CEO='OTTIA PRAISE BETECK'
       />
       
+
+      {/* <Login /> */}
     </>
   )
 }
