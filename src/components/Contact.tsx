@@ -53,31 +53,93 @@ const Contact = (props) => {
 
     }
 
+
     useEffect(() => {
         console.log('Email Address Rendered')
     }, [email]);
 
+    const onMouseEnterEmailInput = () => {
+        emailRef.current.focus();
+
+    }
+
+    const onMouseLeaveEmailInput = () => {
+        emailRef.current.blur();
+
+    }
 
 
     useEffect(() => {
         console.log('City Rendered Alongside Street')
     }, [city]);
 
+    const onMouseEnterCityInput = () => {
+        cityRef.current.focus();
+
+    }
+
+    const onMouseLeaveCityInput = () => {
+        cityRef.current.blur();
+
+    }
+
+
     useEffect(() => {
         console.log('Phone Number Rendered Alongside Zip Code')
     }, [number]);
+
+    const onMouseEnterNumberInput = () => {
+        numberRef.current.focus();
+
+    }
+
+    const onMouseLeaveNumberInput = () => {
+        numberRef.current.blur();
+
+    }
+
 
     useEffect(() => {
         console.log('Subject For Contacting Rendered')
     }, [subject]);
 
+    const onMouseEnterSubjectInput = () => {
+        subjectRef.current.focus();
+
+    }
+
+    const onMouseLeaveSubjectInput = () => {
+        subjectRef.current.blur();
+
+    }
+
     useEffect(() => {
         console.log('Message Explaining Idea Rendered')
     }, [idea]);
 
+    const onMouseEnterIdeaInput = () => {
+        ideaRef.current.focus();
+
+    }
+
+    const onMouseLeaveIdeaInput = () => {
+        ideaRef.current.blur();
+
+    }
+
     useEffect(() => {
         console.log('Country Of Origin Rendered')
     }, [country]);
+
+    const onMouseEnterCountryInput = () => {
+        countryRef.current.focus();
+
+    }
+
+    const onMouseLeaveCountryInput = () => {
+        countryRef.current.blur();
+
+    }
 
 
     return (
@@ -123,16 +185,16 @@ const Contact = (props) => {
                 </div>
                 <div id="bigger" className="bg-white mt-14 py-7  h-auto mb-12 mx-6 w-[445px] md:w-[600px] lg:w-[550px] lg:ml-[-10px] border-t-4 border-b-4 border-t-blue-700 border-b-blue-700 shadow-2xl">
                     <div className="text-left mx-10">
-                        <label className="text-xl tracking-wider leading-9">Your Full Names: <br /> <input ref={nameRef} onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} onChange={(e => setName(e.target.value))} type="text" name="full-name" value={name} placeholder="Full Names" id="full-name" className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px] lg:w-[494px]" /></label>
+                        <label className="text-xl tracking-wider leading-9">Your Full Names: <br /> <input ref={nameRef} onMouseEnter={onMouseEnterNameInput} onMouseLeave={onMouseLeaveNameInput} onChange={(e => setName(e.target.value))} type="text" name="full-name" value={name} placeholder="Full Names" id="full-name" className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px] lg:w-[494px]" /></label>
                     </div>
                     <div className="text-left mx-10 flex flex-col lg:flex-row lg:justify-between">
-                        <label className="text-xl tracking-wider leading-9 mt-3">Your Email Address: <br /> <input ref={emailRef} onChange={(e => setEmail(e.target.value))} type="email" value={email} placeholder="Email Address" name="email" onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} id="email" className="lg:w-[240px] lg:mr-3 border-2 border-slate-200 rounded focus:outline-blue-500 sm:w-72 md:w-[520px]  w-full h-11 px-6 py-4 text-[15px] " /></label>
-                        <label className="text-xl tracking-wider leading-9 mt-3">Your Phone Number: <br /> <input ref={numberRef} onChange={(e => setNumber(e.target.value))} onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} type="tel" value={number} placeholder="Zip Code & Phone Number" name="phone" id="phone" className="lg:w-[240px] border-2 border-slate-200 rounded focus:outline-blue-500 md:w-[520px] sm:w-72 w-full h-11 px-6 py-4 text-[15px] " /></label>
+                        <label className="text-xl tracking-wider leading-9 mt-3">Your Email Address: <br /> <input ref={emailRef} onChange={(e => setEmail(e.target.value))} type="email" value={email} placeholder="Email Address" name="email" onMouseEnter={onMouseEnterEmailInput} onMouseLeave={onMouseLeaveEmailInput} id="email" className="lg:w-[240px] lg:mr-3 border-2 border-slate-200 rounded focus:outline-blue-500 sm:w-72 md:w-[520px]  w-full h-11 px-6 py-4 text-[15px] " /></label>
+                        <label className="text-xl tracking-wider leading-9 mt-3">Your Phone Number: <br /> <input ref={numberRef} onChange={(e => setNumber(e.target.value))} onMouseEnter={onMouseEnterNumberInput} onMouseLeave={onMouseLeaveNumberInput} type="tel" value={number} placeholder="Zip Code & Phone Number" name="phone" id="phone" className="lg:w-[240px] border-2 border-slate-200 rounded focus:outline-blue-500 md:w-[520px] sm:w-72 w-full h-11 px-6 py-4 text-[15px] " /></label>
                     </div>
                     <div className="text-left mx-10 flex flex-col lg:flex-row lg:justify-between">
-                        <label className="text-xl tracking-wider leading-9 mt-3">Your Street & City: <br /> <input onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} ref={cityRef} onChange={(e => setCity(e.target.value))} type="text" value={city} placeholder="Street & City" name="city" id="city" className="border-2 border-slate-200 md:w-[520px] rounded focus:outline-blue-500  w-full lg:w-[240px] h-11 px-6 py-4 text-[15px] sm:w-72 " /></label>
+                        <label className="text-xl tracking-wider leading-9 mt-3">Your Street & City: <br /> <input onMouseEnter={onMouseEnterCityInput} onMouseLeave={onMouseLeaveCityInput} ref={cityRef} onChange={(e => setCity(e.target.value))} type="text" value={city} placeholder="Street & City" name="city" id="city" className="border-2 border-slate-200 md:w-[520px] rounded focus:outline-blue-500  w-full lg:w-[240px] h-11 px-6 py-4 text-[15px] sm:w-72 " /></label>
                         <label className="text-xl tracking-wider leading-9 mt-3">Your Country: <br /> 
-                            <select ref={countryRef} onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} onChange={(e => setCountry(e.target.value))} name="country" id="country" className="lg:w-[240px] md:w-[520px] border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6  text-[15px] sm:w-72 ml-2" value={country}>
+                            <select ref={countryRef} onMouseEnter={onMouseEnterCountryInput} onMouseLeave={onMouseLeaveCountryInput} onChange={(e => setCountry(e.target.value))} name="country" id="country" className="lg:w-[240px] md:w-[520px] border-2 border-slate-200 rounded focus:outline-blue-500  w-full h-11 px-6  text-[15px] sm:w-72 ml-2" value={country}>
                                 <option value="Choose Your Country" >Choose Your Country</option>
                                 <option value="Canada">Canada</option>
                                 <option value="Cameroon">Cameroon</option>
@@ -144,12 +206,12 @@ const Contact = (props) => {
                         </label>
                     </div>
                     <div className="text-left mx-10 mt-4">
-                        <label className="text-xl tracking-wider leading-9 ">Subject: <br /> <input ref={subjectRef} onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} onChange={(e => setSubject(e.target.value))} value={subject} type="text" name="subject" placeholder="Subject" id="subject" className="border-2 border-slate-200 lg:w-[490px] rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px]" /></label>
+                        <label className="text-xl tracking-wider leading-9 ">Subject: <br /> <input ref={subjectRef} onMouseEnter={onMouseEnterSubjectInput} onMouseLeave={onMouseLeaveSubjectInput} onChange={(e => setSubject(e.target.value))} value={subject} type="text" name="subject" placeholder="Subject" id="subject" className="border-2 border-slate-200 lg:w-[490px] rounded focus:outline-blue-500  w-full h-11 px-6 py-4 text-[15px]" /></label>
                     </div>
                     <div className="text-left mx-10 mt-4">
                         <textarea placeholder="                 
                         
-                        message" name="message" id="message" cols="45" rows="6" ref={ideaRef} onMouseEnter={onMouseEnterInput} onMouseLeave={onMouseLeaveInput} value={idea} onChange={(e => setIdea(e.target.value))} className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full px-6 py-4 text-[15px] lg:w-[490px]" ></textarea>
+                        message" name="message" id="message" cols="45" rows="6" ref={ideaRef} onMouseEnter={onMouseEnterIdeaInput} onMouseLeave={onMouseLeaveIdeaInput} value={idea} onChange={(e => setIdea(e.target.value))} className="border-2 border-slate-200 rounded focus:outline-blue-500  w-full px-6 py-4 text-[15px] lg:w-[490px]" ></textarea>
                     </div>
                     <button onClick={submitHandler} className="md:w-[520px] mt-8 border h-12 w-96 rounded hover:opacity-95 ease-in-out hover:cursor-pointer bg-blue-600 text-white font-extrabold text-[16.5px]">Send Message</button>
                 

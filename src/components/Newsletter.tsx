@@ -46,7 +46,7 @@ const Newsletter = (props) => {
         <p className="md:px-14 tracking-widest text-[17px] pt-5 px-7 leading-8"><i>Subscribe To <strong>{props.comName}</strong> To Get The Updates On Latest Developments</i></p>
         <div className="">
           <input id="newsEmail" onMouseEnter={handleHoverEnter} onMouseLeave={handleMouseLeave}  ref={newsLetterRef}  value={emailValue} onChange={handleChange}  type="email" name="email" placeholder="Email Address" className="mt-8 border-2 border-slate-200 rounded-full focus:outline-blue-500  h-14 px-10 w-96  py-4 text-[15px]" />
-          <button id="submitButton" onClick={handleSubmit}  className=" mt-8 border h-14 w-60 rounded-full hover:opacity-95 ease-in-out hover:cursor-pointer bg-blue-600 text-white font-bold text-[17px] tracking-wider md:ml-[-50px]" >Subscribe</button>
+          <button id="submitButton" onClick={handleSubmit}  className=" mt-8 border h-14 w-60 rounded-full hover:opacity-90 ease-in-out hover:cursor-pointer bg-blue-600 text-white font-bold text-[17px] tracking-wider md:ml-[-50px]" >Subscribe</button>
         </div>        
         
          {/* Popup */}
