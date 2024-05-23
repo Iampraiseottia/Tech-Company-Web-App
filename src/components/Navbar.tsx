@@ -1,5 +1,6 @@
 import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import { useState } from 'react'
+import { sectionID } from './sectionID'
 
 const Navbar = (props) => {
 

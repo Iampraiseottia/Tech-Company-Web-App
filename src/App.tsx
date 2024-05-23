@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
+
 import Navbar from "./components/Navbar"
 import Client from "./components/Client"
 import Main from "./components/Main"
@@ -16,7 +18,33 @@ function App() {
   return (
     <>
       
+      <Router>
       <Navbar
+            comName='OTTIATECH'
+            home='Home'
+            about='About'
+            service='Service'
+            team='Team'
+            testimony='Testimony'
+            contact='Contact'
+            login='Sign In'
+          />  
+
+        <Routes>
+          <Route element={
+          <Main
+            comName='OTTIATECH'
+            login='Sign In'
+            register='Get Started'
+            
+          />
+          } path="/">
+
+          </Route>
+        </Routes>
+      </Router>
+
+      {/* <Navbar
         comName='OTTIATECH'
         home='Home'
         about='About'
@@ -25,14 +53,14 @@ function App() {
         testimony='Testimony'
         contact='Contact'
         login='Sign In'
-      />
+      /> */}
 
-      <Main
+      {/* <Main
         comName='OTTIATECH'
         login='Sign In'
         register='Get Started'
         
-      />
+      /> */}
 
       <Client />
 
@@ -89,10 +117,15 @@ function App() {
 
       <Testimony
         comName="Ottiatech"
-        tes1='Ndi Maccarthy Kanjo'
+        tes1='Ayan Ryan Nkum'
         tes2='Kumbong Erica Bessem'
         tes3='Atebah Samuel Chidi'
-    
+        posAM='Accounting Manager, '
+        AmComp='Go Africa'
+        posGM='General Manager'
+        GMComp='Press Print'
+        posHM='Resource Manager'
+        HMComp='Rainbow Ltd'
       />
 
       <Contact
@@ -135,7 +168,7 @@ function App() {
       />
       
 
-      {/* <Login /> */}
+      <Login />
     </>
   )
 }
