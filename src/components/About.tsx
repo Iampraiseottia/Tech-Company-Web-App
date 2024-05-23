@@ -1,7 +1,38 @@
+import { React, useEffect, useState, useRef } from "react"
+
 const About = (props) => {
 
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsVisible(entry.isIntersecting)
+                });
+            },
+            {
+                rootMargin: '0px',
+                threshold: 0.5,
+            }
+        );
+
+        if(sectionRef.current){
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if(sectionRef.current){
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
+    
+
   return (
-    <section id="About" className="leading-9 my-36 text-center">
+    <section ref={sectionRef} style={{opacity: isVisible ? 1.0 : 0, transition: 'opacity 0.5s'}} id="About" className="leading-9 my-36 text-center">
         <div className="">
             <h1 className="text-[37px] font-bold tracking-widest text-[#37517e]">
                 ABOUT US

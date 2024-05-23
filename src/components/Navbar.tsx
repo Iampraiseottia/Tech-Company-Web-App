@@ -88,19 +88,19 @@ const Navbar = (props) => {
           </nav>
         </div>
 
-        <div className='bg-[#37517e] md:hidden items-center h-auto py-10 text-white px-9 fixed z-10 top-0 w-full'>
+        <div className='bg-[#37517e] lg:hidden items-center h-auto py-10 text-white px-9 fixed z-10 top-0 w-full'>
           <div className="pt-3 flex justify-between items-center">
             <div className="flex items-center">   
               <img src="./src/assets/companyLogo.png" className="rounded-full h-14 w-14" />
               <h1 className='font-bold text-2xl pl-3 tracking-wider hover:select-none'>{props.comName}</h1>
             </div>
-            <div onClick={handleNav} className='block md:hidden cursor-pointer'>
+            <div onClick={handleNav} className='block lg:hidden cursor-pointer'>
               {!nav ? <AiOutlineClose size={20} /> : <AiOutlineMenu size={20}/>}
               
             </div>
           </div>
 
-          <nav className={!nav ? 'mt-7 ease-in-out duration-500 block md:hidden' : 'fixed left-[-100%]'}>
+          <nav className={!nav ? 'mt-7 ease-in-out duration-500 block lg:hidden' : 'fixed left-[-100%]'}>
               {/* <ul className="flex flex-col items-center">
                   <li className="border-b-gray-400 border-b w-96 text-center"><a href="#header" className="text-[gold] text-[22px] px-3 hover:opacity-80" id="Home">{props.home}</a></li>
                   <li className="mt-2 border-b-gray-400 border-b w-96 text-center"><a href="#About" className="text-xl hover:opacity-80">{props.about}</a></li>

@@ -19,7 +19,7 @@ function App() {
     <>
       
       <Router>
-      <Navbar
+          <Navbar
             comName='OTTIATECH'
             home='Home'
             about='About'
@@ -43,24 +43,6 @@ function App() {
           </Route>
         </Routes>
       </Router>
-
-      {/* <Navbar
-        comName='OTTIATECH'
-        home='Home'
-        about='About'
-        service='Service'
-        team='Team'
-        testimony='Testimony'
-        contact='Contact'
-        login='Sign In'
-      /> */}
-
-      {/* <Main
-        comName='OTTIATECH'
-        login='Sign In'
-        register='Get Started'
-        
-      /> */}
 
       <Client />
 
