@@ -1,22 +1,55 @@
+import { React, useState, useEffect, useRef } from "react"
 
 const Team = (props) => {
+
+    
+    const [isVisible, setIsVisible] = useState(false);
+    const teamRef = useRef(null);
+    
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsVisible(entry.isIntersecting)
+                });
+            },
+            {
+                rootMargin: '0px',
+                threshold: 0.5,
+            }
+        );
+
+        if(teamRef.current){
+            observer.observe(teamRef.current);
+        }
+
+        return () => {
+            if(teamRef.current){
+                observer.unobserve(teamRef.current);
+            }
+        };
+    }, []);
+    
     
     return (
       
         <section id="Team" className="bg-slate-200 py-20 mt-32 text-center">
-             <div className="">
-                <h1 className="text-[37px] font-bold tracking-widest text-[#37517e]">
-                    {props.teamTitle}
-                </h1>
-                <div className="flex justify-center mt-2 mb-10 items-center">
-                    <hr className="w-12 h-[2px] bg-slate-600" />
-                    <hr className="w-16 h-1 bg-blue-700" />
-                    <hr className="w-12 h-[2px] bg-slate-600" />
+             <div ref={teamRef} style={{opacity: isVisible ? 1 : 0, transition: 'opacity 0.5s'}}>
+                <div className="">
+                    <h1 className="text-[37px] font-bold tracking-widest text-[#37517e]">
+                        {props.teamTitle}
+                    </h1>
+                    <div className="flex justify-center mt-2 mb-10 items-center">
+                        <hr className="w-12 h-[2px] bg-slate-600" />
+                        <hr className="w-16 h-1 bg-blue-700" />
+                        <hr className="w-12 h-[2px] bg-slate-600" />
+                    </div>
                 </div>
-            </div>
-            <p className="tracking-widest text-[17px] pt-8 px-7 leading-8">
-                <strong>{props.comName}</strong> <i> has a very committed, purpose driven, talented and very obsessed with the delivery of precise, accurate and above all top-notch services to you our most honoured customer</i>
-            </p>
+                <p className="tracking-widest text-[17px] pt-8 px-7 leading-8">
+                    <strong>{props.comName}</strong> <i> has a very committed, purpose driven, talented and very obsessed with the delivery of precise, accurate and above all top-notch services to you our most honoured customer</i>
+                </p>
+             </div>
+
             <div className="mt-14 mx-10 flex flex-col-reverse lg:flex-row sm:justify-evenly justify-center">
                 <div id="darkshadow" className="flex flex-col sm:flex sm:flex-row bg-white leading-7 shadow-2xl sm:px-7 h-auto w-auto py-9 items-center text-center rounded hover:translate-y-[-4%] transition duration-500 ">
                     <div className="">

@@ -1,8 +1,36 @@
+import { React, useRef, useState, useEffect } from "react"
 
 const Call = (props) => {
 
+    const [isVisible, setIsVisible] = useState(false);
+    const callRef = useRef(null);
+
+    useEffect(() => {
+        const callObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    setIsVisible(entry.isIntersecting);
+                });
+            },
+            {
+                rootMargin: '0px',
+                threshold: 0.5,
+            },
+        );
+
+        if(callRef.current){
+            callObserver.observe(callRef.current);
+        }
+
+        return () => {
+            if(callRef.current){
+                callObserver.unobserve(callRef.current);
+            }
+        }
+    }, [])
+
   return (
-    <section id="call" className="bg-[#3f6ab3] mb-48 pt-16 w-auto h-96 my-12 text-white text-center">
+    <section ref={callRef} style={{opacity: isVisible ? 1.0 : 0, transition: 'opacity 0.5s'}} id="call" className="bg-[#3f6ab3] mb-48 pt-16 w-auto h-96 my-12 text-white text-center">
         <h1 className="text-[40px] font-bold tracking-wider pb-10">{props.callTitle}</h1>
         <marquee direction="left" className="text-2xl "><strong>{props.comName}</strong> Has The Perfect Solution OF What You Are Looking For.</marquee>
         <div className="mt-10 flex flex-col sm:flex-row items-center sm:justify-center sm:pl-14">

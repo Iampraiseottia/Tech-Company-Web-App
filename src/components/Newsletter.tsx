@@ -38,8 +38,35 @@ const Newsletter = (props) => {
     newsLetterRef.current.blur();
   }
 
+  const [isVisible, setIsVisible] = useState(false);
+  const newsRef = useRef(null);
+
+  useEffect(() => {
+    const newsLetterObsever = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.7,
+      },
+    );
+
+    if(newsRef.current){
+      newsLetterObsever.observe(newsRef.current);
+    }
+
+    return () => {
+      if (newsRef.current){
+        newsLetterObsever.unobserve(newsRef.current);
+      }
+    }
+  }, [])
+
     return (
-      <section id="Newsletter" className=" my-24 bg-slate-200 py-16 text-center">
+      <section ref={newsRef} style={{opacity: isVisible ? 1 : 0, transition: 'opacity 0.5s'}} id="Newsletter" className=" my-24 bg-slate-200 py-16 text-center">
         <h1 className="text-[37px] font-bold tracking-widest text-blue-800">
           {props.newsTitle}
         </h1>

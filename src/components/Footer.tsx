@@ -1,8 +1,37 @@
+import { React,  useState, useRef, useEffect } from "react";
 
 const Footer = (props) => {
 
+  
+  const [isVisible, setIsVisible] = useState(false);
+  const footRef = useRef(null);
+
+  useEffect(() => {
+    const footObsever = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          setIsVisible(entry.isIntersecting);
+        });
+      },
+      {
+        rootMargin: '0px',
+        threshold: 0.7,
+      },
+    );
+
+    if(footRef.current){
+      footObsever.observe(footRef.current);
+    }
+
+    return () => {
+      if (footRef.current){
+        footObsever.unobserve(footRef.current);
+      }
+    }
+  }, [])
+
     return (
-      <section id="Footer" className="flex flex-col justify-center text-center items-center leading-7">
+      <section ref={footRef} style={{opacity: isVisible ? 1 : 0 , transition: 'opacity 0.5s'}} id="Footer" className="flex flex-col justify-center text-center items-center leading-7">
 
       <div className="mx-10">
         
