@@ -95,3 +95,9 @@ body{
         width: 800px;
     }
 }
+
+
+nav ul li a:hover,
+nav ul li a.active{
+    color: gold;
+}
