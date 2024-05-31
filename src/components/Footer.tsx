@@ -1,4 +1,5 @@
 import { React,  useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = (props) => {
 
@@ -15,7 +16,7 @@ const Footer = (props) => {
       },
       {
         rootMargin: '0px',
-        threshold: 0.7,
+        threshold: 0.5,
       },
     );
 
@@ -29,6 +30,9 @@ const Footer = (props) => {
       }
     }
   }, [])
+
+
+    const navigate = useNavigate();
 
     return (
       <section ref={footRef} style={{opacity: isVisible ? 1 : 0 , transition: 'opacity 0.5s'}} id="Footer" className="flex flex-col justify-center text-center items-center leading-7">
@@ -48,6 +52,8 @@ const Footer = (props) => {
             <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Team">{props.team} </a></li>
             <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Testimony">{props.testimony}</a></li>
             <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact">{props.contact}</a></li>
+            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact" onClick={() => navigate('/register')}>Get Started</a></li>
+            <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact" onClick={() => navigate('/login')}>Sign In</a></li>
           </ul>
         </div>
 
@@ -131,6 +137,8 @@ const Footer = (props) => {
               <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Team">{props.team} </a></li>
               <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Testimony">{props.testimony}</a></li>
               <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact">{props.contact}</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact" onClick={() => navigate('/register')}>Get Started</a></li>
+              <li className="hover:cursor-pointer hover:opacity-90 hover:text-blue-500 ease-in-out"><a href="#Contact" onClick={() => navigate('/login')}>Sign In</a></li>
             </ul>
           </div>
           <div className="mb-5 md:block hidden md:w-[20%]">

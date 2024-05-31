@@ -2,6 +2,7 @@ import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import { useEffect, useState } from 'react'
 import { sectionIDs } from './sectionIDs'
 import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom'
 
 
 const Navbar = (props) => {
@@ -64,6 +65,8 @@ const Navbar = (props) => {
   }, [isScroll])
 
 
+  const navigate = useNavigate();
+
   return (
     <section id='Home' >
         <div className='bg-[#37517e] hidden md:flex justify-between items-center h-auto py-10 text-white px-9 fixed z-10 top-0 w-full'>
@@ -82,7 +85,7 @@ const Navbar = (props) => {
                 ))
               }
 
-              <button className="border-[#47b2e4] border-2  py-3 px-7 font-bold rounded-3xl hover:bg-blue-600 hover:border-blue-600 hover:opacity-90"><a href="">{props.login}</a></button>
+              <button className="border-[#47b2e4] border-2  py-3 px-7 font-bold rounded-3xl hover:bg-blue-600 hover:border-blue-600 hover:opacity-90" onClick={ () => navigate('/login')}><a href="">{props.login}</a></button>
 
             </ul>
           </nav>
@@ -101,15 +104,6 @@ const Navbar = (props) => {
           </div>
 
           <nav className={!nav ? 'mt-7 ease-in-out duration-500 block lg:hidden' : 'fixed left-[-100%]'}>
-              {/* <ul className="flex flex-col items-center">
-                  <li className="border-b-gray-400 border-b w-96 text-center"><a href="#header" className="text-[gold] text-[22px] px-3 hover:opacity-80" id="Home">{props.home}</a></li>
-                  <li className="mt-2 border-b-gray-400 border-b w-96 text-center"><a href="#About" className="text-xl hover:opacity-80">{props.about}</a></li>
-                  <li className="mt-4 border-b border-b-gray-400 w-96 text-center"><a href="#" className="text-xl  hover:opacity-80">{props.service}</a></li>
-                  <li className="mt-4 border-b border-b-gray-400 w-96 text-center"><a href="#" className="text-xl  hover:opacity-80">{props.team}</a></li>
-                  <li className="mt-4 border-b border-b-gray-400 w-96 text-center"><a href="#" className="text-xl  hover:opacity-80">{props.testimony}</a></li>
-                  <li className="mt-4 border-b border-b-gray-400 w-96 text-center"><a href="#" className="text-xl  mr-3 hover:opacity-80">{props.contact}</a></li>
-                  <button className="border-[#47b2e4] mt-5 mb-4 border-2  py-3 px-7 font-bold rounded-3xl hover:bg-blue-600 hover:border-blue-600 hover:opacity-90"><a href="#">{props.login}</a></button>
-              </ul> */}
 
               <ul className='flex flex-col items-center'>
                 {
@@ -119,7 +113,7 @@ const Navbar = (props) => {
                     </li>
                   ))
                 }
-                  <button className="border-[#47b2e4] mt-5 mb-4 border-2  py-3 px-7 font-bold rounded-3xl hover:bg-blue-600 hover:border-blue-600 hover:opacity-90"><a href="#">{props.login}</a></button>
+                  <button className="border-[#47b2e4] mt-5 mb-4 border-2  py-3 px-7 font-bold rounded-3xl hover:bg-blue-600 hover:border-blue-600 hover:opacity-90" onClick={() => navigate('/login')}><a href="#">{props.login}</a></button>
 
               </ul>
           </nav>
