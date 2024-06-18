@@ -1,4 +1,4 @@
-import { React, useEffect, useState, useRef } from "react"
+import {  useEffect, useState, useRef } from "react"
 
 const About = (props) => {
 
@@ -62,7 +62,7 @@ const About = (props) => {
                 </ol>
             </div>
             <div className="">
-                <img src="./src/assets/why-us.png" className="sm:h-[440px] w-[740px]" />
+                <img src="./src/assets/home right.png" className="sm:h-[440px] w-[740px]" />
             </div>
         </div>
     </section>

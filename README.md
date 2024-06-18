@@ -1,5 +1,15 @@
 # OTTIATECH Web Application Details
+OTTIATECH is a technology compony which provides a variety of services to the general public
 
+These online web application serves as a platform to show case the amazing and quality technology services offered by these Giant tech company OTTIATECH
+
+The customer to contact the support system of the company through these platform
+
+The customer can also make purchase of services and products and relax while the company delivers top-notch, accurate and timely services
+
+The company has a very hardworking, dedicated and people who love to serve others
+
+The company has been used by so many people wom has left their review
 
 # React + TypeScript + Vite
 
