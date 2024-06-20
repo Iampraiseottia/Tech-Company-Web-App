@@ -108,7 +108,8 @@ nav ul li a.active{
 }
 
 /* Registration and Login  */
-#Register{
+#Register,
+#login{
     background: url("./assets/reglogbg.jpg");
     background-color: #114db3;
     background-blend-mode: multiply;   
@@ -116,10 +117,14 @@ nav ul li a.active{
     height: 100vh;
 }
 
-#regMain{
+#regMain,
+#loginMain{
     border: 3px solid white;
     height: 570px;
     width: 600px;
     box-shadow: 1px 1px 20px 6px gray;
 }
 
+#loginMain{
+    height: 500px;
+}
