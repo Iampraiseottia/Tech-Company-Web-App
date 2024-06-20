@@ -106,3 +106,20 @@ nav ul li a.active{
 #main{
     background: url('../src/assets/technology.webp');
 }
+
+/* Registration and Login  */
+#Register{
+    background: url("./assets/reglogbg.jpg");
+    background-color: #114db3;
+    background-blend-mode: multiply;   
+    width: auto;
+    height: 100vh;
+}
+
+#regMain{
+    border: 3px solid white;
+    height: 570px;
+    width: 600px;
+    box-shadow: 1px 1px 20px 6px gray;
+}
+

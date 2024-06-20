@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 
-
 import SignIn from "./pages/login"
 import SignUp from "./pages/register"
 import Dashboard from "./pages/dashboard"
 import NoPage from "./pages/NoPage"
 import Home from "./pages/home"
+import TermsCondition from "./pages/TermsCondition"
 
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
           <Route element={ <SignUp />  } path="/register" />
 
           <Route element={ <Dashboard />  } path="/dashboard" />
+
+          <Route element={ <TermsCondition />  } path="/termsCondition" />
 
           <Route element={ <NoPage />  } path="*" />
 
