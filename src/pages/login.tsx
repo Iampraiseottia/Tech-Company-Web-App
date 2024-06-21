@@ -1,6 +1,8 @@
 import { useRef } from "react"
 import { FaUser, FaRegAddressBook, FaLock, FaGoogle, FaGithub } from "react-icons/fa"
 import { useNavigate } from "react-router-dom";
+import ReCAPTCHA from "react-google-recaptcha";
+
 
 
 const SignIn = () => {
@@ -39,6 +41,10 @@ const SignIn = () => {
 
   const navigate = useNavigate();
 
+  const onChange = () => {
+    console.log("welcome!!")
+  }
+
 
   return (
     
@@ -60,7 +66,11 @@ const SignIn = () => {
             <input ref={regPassword} onMouseEnter={onMouseEnterPassword} onMouseLeave={onMouseLeavePassword} className=" py-2 pl-8 pr-12 text-[15.5px] bg-transparent text-white border-2 rounded-[30px] w-[350px] focus:outline-blue-500 " type="password" placeholder="Password " name="password" id="passwordReg" />
             <FaLock className=" absolute top-3 right-7" />
           </div>
-         
+          <ReCAPTCHA
+            sitekey="6Le-SP4pAAAAAH8JmDiFy19jz0tkHzSeL7JfJg-b"
+            onChange={onChange} className="mt-3"
+          />
+
           <button id="loginBtn"  className="h-12 mt-5 mb-2 w-[100%] text-center bg-transparent border-2 hover:bg-white hover:text-blue-700 hover:opacity-90 ease-in-out hover:border-blue-700 rounded-[6px] text-[20px] font-extrabold tracking-wider" >LOG IN </button>
           <p className=" text-right tracking-wider text-[15.5px]">Don't Have An Account. <span onClick={() => {navigate("/register")}} className=" text-[17px] hover:text-orange-100 hover:cursor-pointer hover:underline">Get Started</span></p>
           <p className=" text-center ml-[-140px] font-bold tracking-wider text-[20px]">OR</p>
