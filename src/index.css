@@ -135,3 +135,9 @@ nav ul li a.active{
 #loginMain{
     height: 580px;
 }
+
+/* SIDe  BAR */
+#sidebar{
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px    ;
+}
