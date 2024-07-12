@@ -5,6 +5,17 @@ import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
 
+  const [dashboardMain, setDashboardMain] = useState(true);
+
+  const dashboardDisplay = () => {
+    setDashboardMain(true);
+    setDevEnvironment(false);
+    setCloudComEnv(false);
+    setDigitalPayEnv(false)
+    setEComEnv(false)
+
+  }
+
   const [popupVisibility, setPopupVisibility] = useState(false);
 
   const openPopup = () => {
@@ -16,6 +27,51 @@ const Dashboard = () => {
   }
 
   const navigate = useNavigate();
+
+  const [devEnvironment, setDevEnvironment] = useState(false);
+
+  const displayAppDev = () => {
+    setDevEnvironment(true);
+    setDashboardMain(false);
+    setEComEnv(false)
+    setCloudComEnv(false);
+    setDigitalPayEnv(false)
+  }
+
+  const [cloudComEnv, setCloudComEnv] = useState(false);
+
+  const disCloud = () => {
+    setCloudComEnv(true);
+    setDashboardMain(false);
+    setEComEnv(false)
+    setDevEnvironment(false);
+    setDigitalPayEnv(false)
+  }
+
+
+  const [digitalPayEnv, setDigitalPayEnv] = useState(false);
+
+  const disDigPay = () => {
+    setDigitalPayEnv(true);
+    setCloudComEnv(false);
+    setDashboardMain(false);
+    setDevEnvironment(false);
+    setEComEnv(false)
+  }
+
+
+  const [eComEnv, setEComEnv] = useState(false);
+
+  const disECom = () => {
+    setEComEnv(true);
+    setCloudComEnv(false);
+    setDashboardMain(false);
+    setDevEnvironment(false);
+    setDigitalPayEnv(false)
+  }
+
+  const [dataAnaEnv, setDataAnaEnv] = useState(false);
+
 
     return (
       <section className=" bg-slate-200 h-[100vh] relative" >
@@ -29,11 +85,11 @@ const Dashboard = () => {
           </div>
 
           <ul className=" mt-5">
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center text-orange-400"> <FaHome size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Dashboard</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center mt-2 justify-center"> <FaChalkboardTeacher size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">App Development</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaCloud size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Cloud Computing</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaPray size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Digital Payments</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaStore size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">E-commerce</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center text-orange-400" onClick={dashboardDisplay}> <FaHome size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Dashboard</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center mt-2 justify-center" onClick={displayAppDev}> <FaChalkboardTeacher size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">App Development</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disCloud}> <FaCloud size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Cloud Computing</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disDigPay}> <FaPray size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Digital Payments</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disECom}> <FaStore size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">E-commerce</a></li>
             <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaCloud size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Data Analysis</a></li>
             <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaPray size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Streaming</a></li>
             <li className=" hover:opacity-80 ease-in-out flex items-center justify-center mt-5"> <FaReceipt size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">All Transactions</a></li>
@@ -41,6 +97,16 @@ const Dashboard = () => {
           </ul>
         </div>
 
+         {/* MAIN CONTENT DASHBOARD  */}
+        {dashboardMain && (
+          <div className=" ml-96 mr-5 pt-12">
+          Dashboaed: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Explicabo quam voluptatum sint ipsum praesentium unde quibusdam earum facilis perspiciatis labore, magni iste blanditiis. Vel ea eaque ipsum corrupti nobis impedit.
+
+        </div>
+        )}
+
+
+        {/* LOGOUT POPUP  */}
         {popupVisibility && (
           <div id="pop_up_logout" className=" w-[500px] ml-[520px] px-12 pt-[70px] bg-[#114db3] text-white rounded h-64 absolute top-44 shadow-2xl">
             <h1 className=" font-extrabold tracking-wider text-xl text-center">
@@ -52,6 +118,58 @@ const Dashboard = () => {
             </div>
         </div>
         )}
+
+
+        {/* APPLICATION DEVELOPMENT MAIN ENVIRONMENT  */}
+        {devEnvironment && (
+          <div className=" ml-96 pt-14">
+            Application Development
+          </div>
+        )}
+
+
+
+        {/* CLOUD COMPUTING MAIN ENVIRONMENT  */}
+       {cloudComEnv && (
+          <div className=" ml-96 pt-14">
+            CLOud Computing
+          </div>
+        )}
+
+
+         {/* Digital Payments MAIN ENVIRONMENT  */}
+       {digitalPayEnv && (
+          <div className=" ml-96 pt-14">
+            Digital Payments
+          </div>
+        )}
+
+
+         {/* E-Commerce MAIN ENVIRONMENT  */}
+       {eComEnv && (
+          <div className=" ml-96 pt-14">
+            E-Commerce
+          </div>
+        )}
+
+
+        {/*Data Analysis MAIN ENVIRONMENT  */}
+       {dataAnaEnv && (
+          <div className=" ml-96 pt-14">
+           Data Analysis
+          </div>
+        )}
+
+
+        {/* Streaming MAIN ENVIRONMENT  */}
+       {streamEnv && (
+          <div className=" ml-96 pt-14">
+            Streaming
+          </div>
+        )}
+
+
+
       </section>
     )
   }
