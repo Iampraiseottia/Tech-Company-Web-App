@@ -11,9 +11,11 @@ const Dashboard = () => {
     setDashboardMain(true);
     setDevEnvironment(false);
     setCloudComEnv(false);
-    setDigitalPayEnv(false)
-    setEComEnv(false)
-
+    setDigitalPayEnv(false);
+    setEComEnv(false);
+    setDataAnaEnv(false);
+    setStreamEnv(false);
+    setAllTrans(false);
   }
 
   const [popupVisibility, setPopupVisibility] = useState(false);
@@ -33,9 +35,12 @@ const Dashboard = () => {
   const displayAppDev = () => {
     setDevEnvironment(true);
     setDashboardMain(false);
-    setEComEnv(false)
+    setEComEnv(false);
     setCloudComEnv(false);
-    setDigitalPayEnv(false)
+    setDigitalPayEnv(false);
+    setDataAnaEnv(false);
+    setStreamEnv(false);
+    setAllTrans(false);
   }
 
   const [cloudComEnv, setCloudComEnv] = useState(false);
@@ -43,9 +48,11 @@ const Dashboard = () => {
   const disCloud = () => {
     setCloudComEnv(true);
     setDashboardMain(false);
-    setEComEnv(false)
+    setEComEnv(false);
+    setDataAnaEnv(false);
     setDevEnvironment(false);
-    setDigitalPayEnv(false)
+    setDigitalPayEnv(false);
+    setAllTrans(false);
   }
 
 
@@ -56,7 +63,10 @@ const Dashboard = () => {
     setCloudComEnv(false);
     setDashboardMain(false);
     setDevEnvironment(false);
-    setEComEnv(false)
+    setEComEnv(false);
+    setDataAnaEnv(false);
+    setStreamEnv(false);
+    setAllTrans(false);
   }
 
 
@@ -67,11 +77,49 @@ const Dashboard = () => {
     setCloudComEnv(false);
     setDashboardMain(false);
     setDevEnvironment(false);
-    setDigitalPayEnv(false)
+    setDigitalPayEnv(false);
+    setStreamEnv(false);
+    setDataAnaEnv(false);
+    setAllTrans(false);
   }
 
   const [dataAnaEnv, setDataAnaEnv] = useState(false);
 
+  const disDataAna = () => {
+    setDataAnaEnv(true);
+    setEComEnv(false);
+    setCloudComEnv(false);
+    setDashboardMain(false);
+    setDevEnvironment(false);
+    setDigitalPayEnv(false);
+    setStreamEnv(false);
+  }
+
+  const [streamEnv, setStreamEnv] = useState(false);
+
+  const disStream = () => {
+    setStreamEnv(true);
+    setDataAnaEnv(false);
+    setEComEnv(false);
+    setCloudComEnv(false);
+    setDashboardMain(false);
+    setDevEnvironment(false);
+    setDigitalPayEnv(false);
+    setAllTrans(false);
+  }
+
+  const [allTrans, setAllTrans] = useState(false);
+
+  const disAllTrans = () => {
+    setAllTrans(true);
+    setStreamEnv(false);
+    setDataAnaEnv(false);
+    setEComEnv(false);
+    setCloudComEnv(false);
+    setDashboardMain(false);
+    setDevEnvironment(false);
+    setDigitalPayEnv(false);
+  }
 
     return (
       <section className=" bg-slate-200 h-[100vh] relative" >
@@ -90,9 +138,9 @@ const Dashboard = () => {
             <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disCloud}> <FaCloud size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Cloud Computing</a></li>
             <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disDigPay}> <FaPray size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Digital Payments</a></li>
             <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disECom}> <FaStore size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">E-commerce</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaCloud size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Data Analysis</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center"> <FaPray size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Streaming</a></li>
-            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center mt-5"> <FaReceipt size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">All Transactions</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disDataAna}> <FaCloud size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Data Analysis</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center" onClick={disStream}> <FaPray size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">Streaming</a></li>
+            <li className=" hover:opacity-80 ease-in-out flex items-center justify-center mt-5" onClick={disAllTrans}> <FaReceipt size={24} /><a href="#" className=" font-extrabold tracking-widest ml-2 mt-1">All Transactions</a></li>
             <button className=" ml-12 mt-6 h-auto w-auto bg-white text-blue-700 px-12 rounded cursor-pointer hover:opacity-90 ease-in-out  text-xl font-extrabold py-2 flex items-center justify-center " onClick={openPopup}><FaSignOutAlt className=" mr-2" /> Logout</button>
           </ul>
         </div>
@@ -168,7 +216,12 @@ const Dashboard = () => {
           </div>
         )}
 
-
+         {/* All Transactions MAIN ENVIRONMENT  */}
+       {allTrans && (
+          <div className=" ml-96 pt-14">
+            All Transactions
+          </div>
+        )}
 
       </section>
     )
